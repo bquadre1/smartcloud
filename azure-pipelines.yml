@@ -61,6 +61,6 @@ stages:
         azureSubscription: 'Azure subscription 1 (b4002c1c-724a-4c52-b2b6-2857b0074fd7)'
         appType: 'webAppLinux'
         WebAppName: 'smartcloud-dev'
-        packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+        packageForLinux: '$(System.ArtifactsDirectory)/**/*.zip'
         RuntimeStack: 'DOTNETCORE|9.0'
         DeploymentTypeLinux: 'oneDeploy'
