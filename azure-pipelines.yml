@@ -13,8 +13,10 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  TEMP_DIR: $(Agent.TempDirectory)
 
 steps:
+- script: mkdir -p $TEMP_DIR && chmod 755 $TEMP_DIR
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
